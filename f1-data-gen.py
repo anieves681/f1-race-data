@@ -24,11 +24,10 @@ async def main():
         lapTime = str(ham_laps['LapTime'][1])
         await lapChannel.publish('lap', lapTime[-15:])
 
-        for i in range(len(ham_laps)): #len(ham_laps)
-            #for j in range(len(ham_laps['Time'])):
+        for i in range(len(ham_laps)):
             ham_car_data = ham_laps.get_car_data()
             ham_speed = ham_car_data['Speed']
-            for k in range(150): #150
+            for k in range(150):
                 await speedChannel.publish('speed', str(ham_speed[k]))
                 print('Hello from Speed loop ' + speedChannel.name + ' ' + str(ham_speed[k]))
                 time.sleep(.2)
