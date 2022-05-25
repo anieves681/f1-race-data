@@ -92,18 +92,11 @@ public class RealtimeLineChartActivity extends DemoBase implements
             d.setLineWidth(2.5f);
             d.setCircleRadius(4f);
 
-            //int color = colors[z % colors.length];
-            //d.setColor(color);
-            //d.setCircleColor(color);
             dataSets.add(d);
         }
 
         // make the first DataSet dashed
         ((LineDataSet) dataSets.get(0)).enableDashedLine(10, 10, 0);
-        //((LineDataSet) dataSets.get(1)).enableDashedLine(10, 10, 0);
-        //((LineDataSet) dataSets.get(0)).setColors(ColorTemplate.VORDIPLOM_COLORS);
-        //((LineDataSet) dataSets.get(1)).setColors(ColorTemplate.VORDIPLOM_COLORS);
-        //((LineDataSet) dataSets.get(0)).setCircleColors(ColorTemplate.VORDIPLOM_COLORS);
 
         LineData data = new LineData(dataSets);
 
